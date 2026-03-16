@@ -1,1 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Categories on Nicki's little thinking</title><link>https://lucas2029460802.github.io/blogHugoBlowfish/categories/</link><description>Recent content in Categories on Nicki's little thinking</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>© 2026 Nicki</copyright><lastBuildDate>Sun, 15 Mar 2026 14:28:14 +0800</lastBuildDate><atom:link href="https://lucas2029460802.github.io/blogHugoBlowfish/categories/index.xml" rel="self" type="application/rss+xml"/><item><title>学习</title><link>https://lucas2029460802.github.io/blogHugoBlowfish/categories/%E5%AD%A6%E4%B9%A0/</link><pubDate>Sun, 15 Mar 2026 14:28:14 +0800</pubDate><guid>https://lucas2029460802.github.io/blogHugoBlowfish/categories/%E5%AD%A6%E4%B9%A0/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Nicki&#39;s little thinking</title>
+    <link>http://localhost:1313/myblog/categories/</link>
+    <description>Recent content in Categories on Nicki&#39;s little thinking</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 Nicki</copyright>
+    <lastBuildDate>Sun, 15 Mar 2026 14:28:14 +0800</lastBuildDate><atom:link href="http://localhost:1313/myblog/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>学习</title>
+      <link>http://localhost:1313/myblog/categories/%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Sun, 15 Mar 2026 14:28:14 +0800</pubDate>
+      
+      <guid>http://localhost:1313/myblog/categories/%E5%AD%A6%E4%B9%A0/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

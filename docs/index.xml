@@ -1,1 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>首页 on Nicki's little thinking</title><link>https://lucas2029460802.github.io/blogHugoBlowfish/</link><description>Recent content in 首页 on Nicki's little thinking</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>© 2026 Nicki</copyright><lastBuildDate>Sun, 15 Mar 2026 14:28:14 +0800</lastBuildDate><atom:link href="https://lucas2029460802.github.io/blogHugoBlowfish/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo-Blowfish新手开发教学</title><link>https://lucas2029460802.github.io/blogHugoBlowfish/posts/freshmanstudy/</link><pubDate>Sun, 15 Mar 2026 14:28:14 +0800</pubDate><guid>https://lucas2029460802.github.io/blogHugoBlowfish/posts/freshmanstudy/</guid><description/></item><item><title>About</title><link>https://lucas2029460802.github.io/blogHugoBlowfish/about/</link><pubDate>Sun, 15 Mar 2026 00:00:00 +0800</pubDate><guid>https://lucas2029460802.github.io/blogHugoBlowfish/about/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>首页 on Nicki&#39;s little thinking</title>
+    <link>http://localhost:1313/myblog/</link>
+    <description>Recent content in 首页 on Nicki&#39;s little thinking</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 Nicki</copyright>
+    <lastBuildDate>Sun, 15 Mar 2026 14:28:14 +0800</lastBuildDate><atom:link href="http://localhost:1313/myblog/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Hugo-Blowfish新手开发教学</title>
+      <link>http://localhost:1313/myblog/posts/freshmanstudy/</link>
+      <pubDate>Sun, 15 Mar 2026 14:28:14 +0800</pubDate>
+      
+      <guid>http://localhost:1313/myblog/posts/freshmanstudy/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/myblog/about/</link>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/myblog/about/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -2,8 +2,7 @@
 # https://blowfish.page/docs/configuration/
 
 theme = "blowfish"
-baseURL = 'https://lucas2029460802.github.io/blogHugoBlowfish/'
-publishDir = 'docs'
+baseURL = 'https://lucas2029460802.github.io/myblog/'
 defaultContentLanguage = "en"
 enableRobotsTXT = true
 summaryLength = 0

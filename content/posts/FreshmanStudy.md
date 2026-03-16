@@ -1,0 +1,29 @@
++++
+date = '2026-03-15T14:28:14+08:00'
+draft = false
+title = 'Hugo-Blowfish新手开发教学'
+tags=["开发"]
+categories=["学习"]
++++
+## 关于hugo的下载安装和开发
+- **windows用户**：先去`https://github.com/gohugoio/hugo/releases`下载对应的windows版本，解压后将exe文件放在自己建bin文件夹下，随后在环境变量中进行配置，在powershell中输入`hugo version`可以看到版本号即可。
+
+- **创建第一个blog**：在你的文件夹中执行`hugo new site myblog`，随后`cd C:\hugo\myblog`，然后执行命令`git init`
+`git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/你喜欢的主题`,主题可以在`https://themes.gohugo.io/`进行查找。在这里我选择了Blowfish。
+
+
+## 关于blowfish调整主页面（首页）的小结
+
+- **站点基础信息**：在 `config/_default/hugo.toml` 中设置 `baseURL`、`defaultContentLanguage` 等，全站都会受影响。
+- **站点标题与描述**：在当前语言的 `config/_default/languages.<语言>.toml` 中修改 `title` 和 `description`，例如 `languages.en.toml` 或 `languages.zh-cn.toml`。
+- **作者信息与社交图标**：在对应语言文件里的 `[params.author]` 块中修改 `name`、`headline`、`bio` 和 `links`，`links` 的键名决定使用哪个图标，值是实际跳转的 URL。
+- **首页布局和样式**：在 `config/_default/params.toml` 中的 `[homepage]`、`[header]`、`[footer]` 等设置首页布局（例如背景图、是否展示最新文章）、顶部和底部菜单样式。
+- **导航菜单文字与结构**：在 `config/_default/menus.<语言>.toml` 中调整 `[[main]]` 和 `[[footer]]`，可以改菜单名称（如“Home”“Posts”）以及对应的栏目或外链。
+
+## 生成与管理文章（post）的小结
+
+- **创建新文章文件**：在项目根目录运行 `hugo new posts/你的文件名.md`，Hugo 会在 `content/posts/` 下创建一篇带 Front Matter 的文章。
+- **编辑文章信息**：打开新建的 `.md` 文件，在顶部 Front Matter 中设置 `title`、`date`、`draft`、`tags`、`categories` 等；将 `draft` 设为 `false`，文章才会在正式环境中显示。
+- **撰写正文内容**：在 Front Matter 下面用 Markdown 写正文，可以使用标题、列表、代码块、图片等常规 Markdown 语法。
+- **本地预览网站**：在项目根目录运行 `hugo server`，浏览器访问提示的本地地址（通常是 `http://localhost:1313/`），即可在首页和 `/posts/` 列表中看到新文章。
+- **重新生成静态文件**：修改配置或文章后，运行一次 `hugo` 会重新生成 `public/` 目录中的静态页面，部署到线上时应上传/同步这一目录的内容。

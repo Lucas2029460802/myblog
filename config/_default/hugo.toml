@@ -1,0 +1,57 @@
+# 站点配置 - 与根目录 hugo.toml 合并，此处优先
+# https://blowfish.page/docs/configuration/
+
+theme = "blowfish"
+baseURL = 'https://lucas2029460802.github.io/blogHugoBlowfish/'
+publishDir = 'docs'
+defaultContentLanguage = "en"
+git add .`
+enableRobotsTXT = true
+summaryLength = 0
+buildDrafts = true
+buildFuture = false
+enableEmoji = true
+
+[pagination]
+  pagerSize = 10
+
+[imaging]
+  anchor = "Center"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  author = "authors"
+  series = "series"
+
+[sitemap]
+  changefreq = "daily"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[related]
+  threshold = 0
+  toLower = false
+  [[related.indices]]
+    name = "tags"
+    weight = 100
+  [[related.indices]]
+    name = "categories"
+    weight = 100
+  [[related.indices]]
+    name = "series"
+    weight = 50
+  [[related.indices]]
+    name = "authors"
+    weight = 20
+  [[related.indices]]
+    name = "date"
+    weight = 10
+  [[related.indices]]
+    applyFilter = false
+    name = "fragmentrefs"
+    type = "fragments"
+    weight = 10

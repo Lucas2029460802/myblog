@@ -1,0 +1,35 @@
+# .github/workflows/gh-pages.yml
+name: GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # 监听 main 分支的推送事件
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-24.04
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          submodules: true  # 重要：拉取子模块 (你的 blowfish 主题)
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "latest" # 使用最新版 Hugo
+
+      - name: Build
+        run: hugo --minify  # 构建并压缩站点
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} # GitHub 自动提供的 token
+          publish_branch: gh-pages  # 将构建好的文件推送到 gh-pages 分支
+          publish_dir: ./public  # 要推送的文件夹，即 hugo 构建的成果

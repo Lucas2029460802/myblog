@@ -1,0 +1,31 @@
+# English - used when defaultContentLanguage = "en"
+# https://blowfish.page/docs/configuration/#language-and-i18n
+
+disabled = false
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "Nicki's little thinking"
+
+[params]
+  displayName = "EN"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "2006-01-02"
+  logo = "img/furry2.png"
+  secondaryLogo = "img/chiikawa.png"
+  description = "Nicki's little thinking."
+  copyright = "© { year } Nicki"
+
+[params.author]
+  name = "Nicki"
+  image = "img/chiikawa.png"
+  imageQuality = 96
+  headline = "welcome to my blog."
+  bio = "Record and share here."
+  links = [
+    { github = "https://github.com/Lucas2029460802" },
+    { steam = "https://steamcommunity.com/id/nickiDoe" },
+    {email = "2029460802@qq.com" },
+    {telegram = "https://t.me/nickiDoe"},
+  ]

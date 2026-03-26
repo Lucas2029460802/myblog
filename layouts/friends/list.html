@@ -1,0 +1,68 @@
+{{ define "main" }}
+  <header>
+    {{ if .Params.showBreadcrumbs | default (site.Params.list.showBreadcrumbs | default false) }}
+      {{ partial "breadcrumbs.html" . }}
+    {{ end }}
+    <h1 class="mt-5 text-4xl font-extrabold text-neutral-900 dark:text-neutral">{{ .Title }}</h1>
+    {{ with .Params.description }}
+      <p class="mt-3 text-base text-neutral-500 dark:text-neutral-400">{{ . }}</p>
+    {{ end }}
+  </header>
+
+  <section class="mt-10 prose dark:prose-invert max-w-none">
+    {{ .Content }}
+  </section>
+
+  {{ $friends := .Site.Data.friends.friends }}
+  <section class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    {{ if $friends }}
+      {{ range $friends }}
+        {{ $name := .name | default "未命名友链" }}
+        {{ $url := .url | default "#" }}
+        {{ if not (or (strings.HasPrefix $url "http://") (strings.HasPrefix $url "https://")) }}
+          {{ $url = "#" }}
+        {{ end }}
+        {{ $logo := .logo }}
+        {{ $logoURL := ("images/friends/avatar.jpg" | relURL) }}
+        {{ if $logo }}
+          {{ if or (strings.HasPrefix $logo "http://") (strings.HasPrefix $logo "https://") }}
+            {{ $logoURL = $logo }}
+          {{ else }}
+            {{ $logoPath := $logo }}
+            {{ if strings.HasPrefix $logoPath "/" }}
+              {{ $logoPath = (strings.TrimPrefix "/" $logoPath) }}
+            {{ end }}
+            {{ $logoURL = ($logoPath | relURL) }}
+          {{ end }}
+        {{ end }}
+        <a
+          href="{{ $url }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group flex items-center gap-4 rounded-2xl border bf-border-color bg-neutral-50/60 dark:bg-neutral-900/40 p-5 transition hover:-translate-y-0.5 hover:shadow-xl">
+          <img
+            src="{{ $logoURL }}"
+            alt="{{ $name }}"
+            loading="lazy"
+            decoding="async"
+            width="56"
+            height="56"
+            class="h-14 w-14 rounded-full object-cover border bf-border-color shrink-0" />
+          <div class="min-w-0">
+            <div class="font-bold text-neutral-900 dark:text-neutral truncate">{{ $name }}</div>
+            <div class="text-sm text-neutral-500 dark:text-neutral-400 truncate">{{ $url }}</div>
+            {{ with .desc }}
+              <div class="mt-1 text-sm text-neutral-600 dark:text-neutral-300 line-clamp-2">{{ . }}</div>
+            {{ end }}
+          </div>
+        </a>
+      {{ end }}
+    {{ else }}
+      <div class="rounded-2xl border bf-border-color p-6">
+        <p class="m-0 text-sm text-neutral-600 dark:text-neutral-300">
+          还没有配置友链。请在 <code>data/friends.toml</code> 中添加。
+        </p>
+      </div>
+    {{ end }}
+  </section>
+{{ end }}

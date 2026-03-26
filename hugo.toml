@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = '彭知书的小窝'
-theme='Blowfish'
+baseURL = "https://lucas2029460802.github.io/myblog/"
+languageCode = "en"
+title = "Nicki's little thinking"
+theme = "blowfish"

@@ -5,16 +5,16 @@ disabled = false
 languageCode = "en"
 languageName = "English"
 weight = 1
-title = "Nicki's little thinking"
+title = "welcome!"
 
 [params]
   displayName = "EN"
   isoCode = "en"
   rtl = false
   dateFormat = "2006-01-02"
-  logo = "img/furry2.png"
-  secondaryLogo = "img/chiikawa.png"
-  description = "Nicki's little thinking."
+  # logo = "img/fairytail-icon.png"
+  # secondaryLogo = "img/chiikawa.png"
+  description = "welcome!"
   copyright = "© { year } Nicki"
 
 [params.author]

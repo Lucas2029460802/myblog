@@ -1,0 +1,6 @@
+/* 左上角站点标题：适当放大 */
+.main-menu > a.text-base.font-medium {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}

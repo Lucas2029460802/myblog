@@ -4,6 +4,7 @@ draft = false
 title = 'Hugo-Blowfish新手开发教学'
 tags=["开发"]
 categories=["学习"]
+summary = "如何用hugo开发自己的网站，并采用Blowfish的模板"
 +++
 ## 关于hugo的下载安装和开发
 - **windows用户**：先去`https://github.com/gohugoio/hugo/releases`下载对应的windows版本，解压后将exe文件放在自己建bin文件夹下，随后在环境变量中进行配置，在powershell中输入`hugo version`可以看到版本号即可。
@@ -13,7 +14,7 @@ categories=["学习"]
 
 
 ## 关于blowfish调整主页面（首页）的小结
-
+注意一定要阅读官方文档
 - **站点基础信息**：在 `config/_default/hugo.toml` 中设置 `baseURL`、`defaultContentLanguage` 等，全站都会受影响。
 - **站点标题与描述**：在当前语言的 `config/_default/languages.<语言>.toml` 中修改 `title` 和 `description`，例如 `languages.en.toml` 或 `languages.zh-cn.toml`。
 - **作者信息与社交图标**：在对应语言文件里的 `[params.author]` 块中修改 `name`、`headline`、`bio` 和 `links`，`links` 的键名决定使用哪个图标，值是实际跳转的 URL。

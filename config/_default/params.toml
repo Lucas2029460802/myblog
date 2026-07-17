@@ -27,7 +27,7 @@ mainSections = ["posts"]
   showRecent = true
   showRecentItems = 6
   showMoreLink = true
-  showMoreLinkDest = "/posts/"
+  showMoreLinkDest = "posts/"
   layoutBackgroundBlur = true
 
 [article]

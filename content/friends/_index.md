@@ -1,6 +1,6 @@
 ---
-title: "宝子们"
-description: "喵喵喵"
+title: "友链频道"
+description: "ciallo~"
 ---
 
-欢迎交换友链捏~
+用爱翻转世界
